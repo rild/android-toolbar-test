@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("section 2"));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true); // RecyclerViewのサイズを維持し続ける
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setHasFixedSize(true); // RecyclerViewのサイズを維持し続ける
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager
                 (new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(new RecyclerAdapter(this, createData()));
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private List<String> createData() {
         List<String> data = new ArrayList<>();
 
-        for (int i = 0; i < data.size(); i++) {
+        for (int i = 0; i < 20; i++) {
             data.add(String.valueOf(i));
         }
 
